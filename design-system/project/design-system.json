@@ -58,7 +58,7 @@
   "lastChange": {
     "by": "Claude",
     "at": "2026-10-15T09:00:00Z",
-    "via": "Claude Code (local copy only, not yet synced to the published Claude Design version)",
-    "note": "Added PhotoHero, PhotoTile, DemoBadge; mp-filters--panel; local demo clip in VideoEmbed (CSS + initVideo). ProjectCard now uses DemoBadge."
+    "via": "Claude Code — published to Claude Design project 'Memora Plus' (a292121f-f885-4517-bd41-c9d754f7f66f) on 2026-10-15",
+    "note": "Added PhotoHero, PhotoTile, DemoBadge; mp-filters--panel; local demo clip in VideoEmbed (CSS + initVideo). ProjectCard now uses DemoBadge. Header/Footer previews use relative logo paths (assets/Logos/) instead of /_blob/ ids."
   }
 }
