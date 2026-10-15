@@ -1,0 +1,23 @@
+# Client originals and private material — never published
+VID/
+*.docx
+referance-links.txt
+
+# Dependencies and build output
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# Local environment (only .env.example is committed)
+.env
+.env*.local
+
+# Personal Claude Code settings (machine paths, local permissions)
+**/.claude/settings.local.json
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/

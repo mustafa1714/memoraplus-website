@@ -1,0 +1,17 @@
+<!doctype html><html lang="ar" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CookieBanner — Memora Plus</title><link rel="stylesheet" href="../fonts/fonts.css"><link rel="stylesheet" href="../dist/tokens.css"><link rel="stylesheet" href="../project/components/bundle.css"><script src="../project/components/bundle.js"></script></head><body style="margin:0;background:#fff"><div style="max-width:640px"><!-- @dsCard group="Feedback" height=300 width=640 subtitle="First visit · choice dispatches mp:consent" -->
+<div class="mp-root" lang="ar" dir="rtl" style="padding:24px;background:var(--surface-soft)">
+  <section class="mp-cookie mp-cookie--static mp-dark" data-mp-cookie-demo role="region" aria-labelledby="ck-title">
+    <h2 class="mp-cookie__title" id="ck-title">ملفات الارتباط</h2>
+    <p class="mp-cookie__text">نستخدم ملفات الارتباط لتحليل الزيارات وتحسين تجربتكم. لن نفعّلها إلا بموافقتكم. <a href="#">سياسة الخصوصية</a></p>
+    <div class="mp-cookie__actions">
+      <button class="mp-btn mp-btn--accept" type="button" data-mp-consent="accept">قبول</button>
+      <button class="mp-btn mp-btn--outline" type="button" data-mp-consent="reject">رفض</button>
+    </div>
+    <p class="mp-cookie__text" data-ck-result aria-live="polite"></p>
+  </section>
+</div>
+<script>
+  var ck = document.querySelector("[data-mp-cookie-demo]");
+  MemoraPlus.initCookieBanner(ck, { ignoreSaved: true, onChoice: function (ok) { ck.querySelector("[data-ck-result]").textContent = ok ? "تم القبول — يُحمَّل Analytics وPixel الآن." : "تم الرفض — لن يُحمَّل أي تتبّع."; } });
+</script>
+</div></body></html>

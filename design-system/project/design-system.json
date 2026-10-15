@@ -1,0 +1,64 @@
+{
+  "v": 3,
+  "layout": "files",
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-10-13T15:19:08Z"
+  },
+  "title": "Memora Plus",
+  "namespace": "MemoraPlus",
+  "libraries": [],
+  "sections": {},
+  "groups": [
+    "Logos"
+  ],
+  "assetGroups": {
+    "Logos": {
+      "name": "Logos",
+      "tile": "l",
+      "order": [
+        "memora-plus-logo-01-trimmed.webp",
+        "memora-plus-logo-02-trimmed.webp",
+        "memora-plus-icon-01.webp",
+        "memora-plus-icon-02.webp"
+      ],
+      "files": {
+        "memora-plus-logo-01-trimmed.webp": {
+          "name": "memora-plus-logo-01-trimmed.webp",
+          "blob": "1e48c2a138609a703140f613b8e1a857",
+          "size": 30976,
+          "type": "image/webp"
+        },
+        "memora-plus-logo-02-trimmed.webp": {
+          "name": "memora-plus-logo-02-trimmed.webp",
+          "blob": "737c2f10d950f29f0eb94b0a38252c9c",
+          "size": 30812,
+          "type": "image/webp"
+        },
+        "memora-plus-icon-01.webp": {
+          "name": "memora-plus-icon-01.webp",
+          "blob": "cc33b11353a80aafed251310369a98d1",
+          "size": 8222,
+          "type": "image/webp"
+        },
+        "memora-plus-icon-02.webp": {
+          "name": "memora-plus-icon-02.webp",
+          "blob": "b735c38a4ea2d2b902f0b5b230cb75af",
+          "size": 8226,
+          "type": "image/webp"
+        }
+      }
+    }
+  },
+  "blobs": {},
+  "docs": {
+    "readme": "project/README.md",
+    "sections": []
+  },
+  "lastChange": {
+    "by": "Claude",
+    "at": "2026-10-15T09:00:00Z",
+    "via": "Claude Code (local copy only, not yet synced to the published Claude Design version)",
+    "note": "Added PhotoHero, PhotoTile, DemoBadge; mp-filters--panel; local demo clip in VideoEmbed (CSS + initVideo). ProjectCard now uses DemoBadge."
+  }
+}

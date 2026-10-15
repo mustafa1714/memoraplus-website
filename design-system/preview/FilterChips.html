@@ -1,0 +1,115 @@
+<!doctype html><html lang="ar" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FilterChips — Memora Plus</title><link rel="stylesheet" href="../fonts/fonts.css"><link rel="stylesheet" href="../dist/tokens.css"><link rel="stylesheet" href="../project/components/bundle.css"><script src="../project/components/bundle.js"></script></head><body style="margin:0;background:#fff"><div style="max-width:1200px"><!-- @dsCard group="Projects" height=1100 width=1200 subtitle="Live: click a chip to filter the draft cards" -->
+<div class="mp-root" lang="ar" dir="rtl" style="padding:24px;display:grid;gap:24px">
+  <div class="mp-filters" data-mp-filters="#mp-demo-grid">
+    <div class="mp-filters__group" role="group" aria-labelledby="f-loc" data-mp-filter-group="location">
+      <span class="mp-filters__legend" id="f-loc">الموقع</span>
+      <button type="button" class="mp-chip" data-mp-chip data-value="" aria-pressed="true"><span data-mp-icon="check"></span>الكل</button>
+      <button type="button" class="mp-chip" data-mp-chip data-value="europe" aria-pressed="false"><span data-mp-icon="check"></span>الجانب الأوروبي</button>
+      <button type="button" class="mp-chip" data-mp-chip data-value="asia" aria-pressed="false"><span data-mp-icon="check"></span>الجانب الآسيوي</button>
+    </div>
+    <div class="mp-filters__group" role="group" aria-labelledby="f-type" data-mp-filter-group="type">
+      <span class="mp-filters__legend" id="f-type">النوع</span>
+      <button type="button" class="mp-chip" data-mp-chip data-value="" aria-pressed="true"><span data-mp-icon="check"></span>الكل</button>
+      <button type="button" class="mp-chip" data-mp-chip data-value="residential" aria-pressed="false"><span data-mp-icon="check"></span>سكني</button>
+      <button type="button" class="mp-chip" data-mp-chip data-value="commercial" aria-pressed="false"><span data-mp-icon="check"></span>تجاري</button>
+      <button type="button" class="mp-chip" data-mp-chip data-value="investment" aria-pressed="false"><span data-mp-icon="check"></span>استثماري</button>
+    </div>
+    <div class="mp-filters__group" role="group" aria-labelledby="f-status" data-mp-filter-group="status">
+      <span class="mp-filters__legend" id="f-status">الحالة</span>
+      <button type="button" class="mp-chip" data-mp-chip data-value="" aria-pressed="true"><span data-mp-icon="check"></span>الكل</button>
+      <button type="button" class="mp-chip" data-mp-chip data-value="ready" aria-pressed="false"><span data-mp-icon="check"></span>جاهز للتسليم</button>
+      <button type="button" class="mp-chip" data-mp-chip data-value="construction" aria-pressed="false"><span data-mp-icon="check"></span>قيد الإنشاء</button>
+    </div>
+    <p class="mp-filters__status" data-mp-filter-status aria-live="polite" data-template="عدد المشاريع المعروضة: {n}"></p>
+  </div>
+  <div class="mp-grid" id="mp-demo-grid">
+    <ul class="mp-grid__list">
+<li><article class="mp-card" data-mp-card data-location="europe" data-type="residential" data-status="construction">
+  <div class="mp-card__media">
+    <div class="mp-card__placeholder" role="img" aria-label="صورة المشروع — مؤقتة"><span data-mp-icon="building"></span><span>صورة المشروع</span></div>
+    <div class="mp-card__badges"><span class="mp-badge mp-badge--status">قيد الإنشاء</span><span class="mp-badge mp-badge--draft">بيانات تجريبية</span></div>
+  </div>
+  <div class="mp-card__body">
+    <p class="mp-card__type">شقق سكنية</p>
+    <h3 class="mp-card__title">مشروع تجريبي 01</h3>
+    <p class="mp-card__loc"><span data-mp-icon="pin"></span>إسطنبول — الجانب الأوروبي</p>
+    <p class="mp-card__price"><span class="mp-card__price-label">يبدأ من</span><span class="mp-card__price-value mp-ltr">$250,000</span></p>
+    <dl class="mp-card__facts">
+      <div class="mp-card__fact"><dt>الدفعة الأولى</dt><dd>35%</dd></div>
+      <div class="mp-card__fact"><dt>الأقساط</dt><dd>24 شهراً</dd></div>
+      <div class="mp-card__fact"><dt>التسليم</dt><dd>2027</dd></div>
+    </dl>
+    <div class="mp-card__actions">
+      <a class="mp-btn mp-btn--whatsapp mp-btn--sm" data-mp-whatsapp data-project="مشروع تجريبي 01" href="https://wa.me/905436227764"><span data-mp-icon="whatsapp-chat"></span>استفسر عبر واتساب</a>
+      <a class="mp-btn mp-btn--outline mp-btn--sm" href="tel:+905436227764" aria-label="اتصل بنا بخصوص مشروع تجريبي 01"><span data-mp-icon="phone"></span></a>
+    </div>
+  </div>
+</article></li>
+<li><article class="mp-card" data-mp-card data-location="asia" data-type="investment" data-status="ready">
+  <div class="mp-card__media">
+    <div class="mp-card__placeholder" role="img" aria-label="صورة المشروع — مؤقتة"><span data-mp-icon="building"></span><span>صورة المشروع</span></div>
+    <div class="mp-card__badges"><span class="mp-badge mp-badge--status">جاهز للتسليم</span><span class="mp-badge mp-badge--draft">بيانات تجريبية</span></div>
+  </div>
+  <div class="mp-card__body">
+    <p class="mp-card__type">فرصة استثمارية</p>
+    <h3 class="mp-card__title">مشروع تجريبي 02</h3>
+    <p class="mp-card__loc"><span data-mp-icon="pin"></span>إسطنبول — الجانب الآسيوي</p>
+    <p class="mp-card__price"><span class="mp-card__price-label">يبدأ من</span><span class="mp-card__price-value mp-ltr">$410,000</span></p>
+    <dl class="mp-card__facts">
+      <div class="mp-card__fact"><dt>الدفعة الأولى</dt><dd>50%</dd></div>
+      <div class="mp-card__fact"><dt>الأقساط</dt><dd>12 شهراً</dd></div>
+      <div class="mp-card__fact"><dt>التسليم</dt><dd>فوري</dd></div>
+    </dl>
+    <div class="mp-card__actions">
+      <a class="mp-btn mp-btn--whatsapp mp-btn--sm" data-mp-whatsapp data-project="مشروع تجريبي 02" href="https://wa.me/905436227764"><span data-mp-icon="whatsapp-chat"></span>استفسر عبر واتساب</a>
+      <a class="mp-btn mp-btn--outline mp-btn--sm" href="tel:+905436227764" aria-label="اتصل بنا بخصوص مشروع تجريبي 02"><span data-mp-icon="phone"></span></a>
+    </div>
+  </div>
+</article></li>
+<li><article class="mp-card" data-mp-card data-location="europe" data-type="commercial" data-status="ready">
+  <div class="mp-card__media">
+    <div class="mp-card__placeholder" role="img" aria-label="صورة المشروع — مؤقتة"><span data-mp-icon="building"></span><span>صورة المشروع</span></div>
+    <div class="mp-card__badges"><span class="mp-badge mp-badge--status">جاهز للتسليم</span><span class="mp-badge mp-badge--draft">بيانات تجريبية</span></div>
+  </div>
+  <div class="mp-card__body">
+    <p class="mp-card__type">وحدات تجارية</p>
+    <h3 class="mp-card__title">مشروع تجريبي 03</h3>
+    <p class="mp-card__loc"><span data-mp-icon="pin"></span>إسطنبول — الجانب الأوروبي</p>
+    <p class="mp-card__price"><span class="mp-card__price-label">يبدأ من</span><span class="mp-card__price-value mp-ltr">$180,000</span></p>
+    <dl class="mp-card__facts">
+      <div class="mp-card__fact"><dt>الدفعة الأولى</dt><dd>40%</dd></div>
+      <div class="mp-card__fact"><dt>الأقساط</dt><dd>18 شهراً</dd></div>
+      <div class="mp-card__fact"><dt>التسليم</dt><dd>فوري</dd></div>
+    </dl>
+    <div class="mp-card__actions">
+      <a class="mp-btn mp-btn--whatsapp mp-btn--sm" data-mp-whatsapp data-project="مشروع تجريبي 03" href="https://wa.me/905436227764"><span data-mp-icon="whatsapp-chat"></span>استفسر عبر واتساب</a>
+      <a class="mp-btn mp-btn--outline mp-btn--sm" href="tel:+905436227764" aria-label="اتصل بنا بخصوص مشروع تجريبي 03"><span data-mp-icon="phone"></span></a>
+    </div>
+  </div>
+</article></li>
+<li><article class="mp-card" data-mp-card data-location="asia" data-type="residential" data-status="construction">
+  <div class="mp-card__media">
+    <div class="mp-card__placeholder" role="img" aria-label="صورة المشروع — مؤقتة"><span data-mp-icon="building"></span><span>صورة المشروع</span></div>
+    <div class="mp-card__badges"><span class="mp-badge mp-badge--status">قيد الإنشاء</span><span class="mp-badge mp-badge--draft">بيانات تجريبية</span></div>
+  </div>
+  <div class="mp-card__body">
+    <p class="mp-card__type">شقق سكنية</p>
+    <h3 class="mp-card__title">مشروع تجريبي 04</h3>
+    <p class="mp-card__loc"><span data-mp-icon="pin"></span>إسطنبول — الجانب الآسيوي</p>
+    <p class="mp-card__price"><span class="mp-card__price-label">يبدأ من</span><span class="mp-card__price-value mp-ltr">$320,000</span></p>
+    <dl class="mp-card__facts">
+      <div class="mp-card__fact"><dt>الدفعة الأولى</dt><dd>30%</dd></div>
+      <div class="mp-card__fact"><dt>الأقساط</dt><dd>36 شهراً</dd></div>
+      <div class="mp-card__fact"><dt>التسليم</dt><dd>2028</dd></div>
+    </dl>
+    <div class="mp-card__actions">
+      <a class="mp-btn mp-btn--whatsapp mp-btn--sm" data-mp-whatsapp data-project="مشروع تجريبي 04" href="https://wa.me/905436227764"><span data-mp-icon="whatsapp-chat"></span>استفسر عبر واتساب</a>
+      <a class="mp-btn mp-btn--outline mp-btn--sm" href="tel:+905436227764" aria-label="اتصل بنا بخصوص مشروع تجريبي 04"><span data-mp-icon="phone"></span></a>
+    </div>
+  </div>
+</article></li></ul>
+    <p class="mp-filters__empty" data-mp-filter-empty hidden>لا توجد مشاريع مطابقة. جرّبوا اختياراً آخر أو تواصلوا معنا عبر واتساب.</p>
+  </div>
+</div>
+<script>MemoraPlus.initAll(document);</script>
+</div></body></html>
