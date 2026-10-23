@@ -3,13 +3,13 @@
 import { useMemo, useState } from "react";
 import type { Locale } from "@/content/site";
 import { DICT } from "@/content/site";
-import type { Project } from "@/content/projects";
+import type { CardProject } from "@/content/projects/media-utils";
 import { ProjectCard } from "./ProjectCard";
 import { Icon } from "./Icon";
 
 type Key = "side" | "type" | "status";
 
-export function ProjectsExplorer({ lang, projects }: { lang: Locale; projects: Project[] }) {
+export function ProjectsExplorer({ lang, projects }: { lang: Locale; projects: CardProject[] }) {
   const t = DICT[lang].projects;
   const f = t.filters;
   const [state, setState] = useState<Record<Key, string>>({ side: "", type: "", status: "" });
@@ -17,7 +17,8 @@ export function ProjectsExplorer({ lang, projects }: { lang: Locale; projects: P
   const groups: { key: Key; label: string; options: { value: string; label: string }[] }[] = [
     { key: "side", label: f.location, options: [{ value: "europe", label: f.europe }, { value: "asia", label: f.asia }] },
     { key: "type", label: f.type, options: [{ value: "residential", label: f.residential }, { value: "commercial", label: f.commercial }, { value: "investment", label: f.investment }] },
-    { key: "status", label: f.status, options: [{ value: "ready", label: f.ready }, { value: "construction", label: f.construction }] },
+    // Projects whose status the source doesn't state appear only under "All".
+    { key: "status", label: f.status, options: [{ value: "ready", label: f.ready }, { value: "construction", label: f.construction }, { value: "mixed", label: f.mixed }] },
   ];
 
   const shown = useMemo(
@@ -46,7 +47,7 @@ export function ProjectsExplorer({ lang, projects }: { lang: Locale; projects: P
       <div className="mp-grid">
         {shown.length > 0 ? (
           <ul className="mp-grid__list">
-            {shown.map((p) => (<li key={p.id}><ProjectCard project={p} lang={lang} headingLevel={2} /></li>))}
+            {shown.map((p) => (<li key={p.slug}><ProjectCard project={p} lang={lang} headingLevel={2} /></li>))}
           </ul>
         ) : (
           <p className="mp-filters__empty">{t.empty}</p>

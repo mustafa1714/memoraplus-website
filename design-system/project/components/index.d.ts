@@ -1,6 +1,6 @@
 /** Memora Plus — vanilla JS helpers exposed as window.MemoraPlus (no framework). Components are HTML + CSS classes; see each components/<Comp>/README.md. */
 declare namespace MemoraPlus {
-  /** WhatsApp number in international format without "+": "905436227764". */
+  /** WhatsApp number in international format without "+": "905312450579". */
   const PHONE: string;
   /** Names of the built-in line icons. */
   const icons: Array<"whatsapp-chat" | "phone" | "pin" | "calendar" | "building" | "arrow" | "play" | "globe" | "menu" | "close" | "check">;

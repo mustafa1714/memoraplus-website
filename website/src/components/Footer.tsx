@@ -2,9 +2,9 @@ import type { Locale } from "@/content/site";
 import { DICT, CONTACT } from "@/content/site";
 import { href, whatsappUrl } from "@/lib/utils";
 import { Icon } from "./Icon";
-import { LanguageSwitch, type PageKey } from "./LanguageSwitch";
+import { LanguageSwitch } from "./LanguageSwitch";
 
-export function Footer({ lang, page }: { lang: Locale; page: PageKey }) {
+export function Footer({ lang, path }: { lang: Locale; path: string }) {
   const t = DICT[lang];
   return (
     <footer className="mp-footer mp-dark">
@@ -39,7 +39,7 @@ export function Footer({ lang, page }: { lang: Locale; page: PageKey }) {
         </div>
         <div className="mp-footer__bottom">
           <span>© {new Date().getFullYear()} Memora Plus. {t.footer.rights}</span>
-          <LanguageSwitch lang={lang} page={page} label={t.nav.language} />
+          <LanguageSwitch lang={lang} path={path} label={t.nav.language} />
         </div>
       </div>
     </footer>

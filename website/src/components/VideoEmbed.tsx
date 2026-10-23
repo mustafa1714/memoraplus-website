@@ -3,11 +3,11 @@
 import { useState } from "react";
 import { Icon } from "./Icon";
 
-type DemoClip = { src: string; poster: string; badge: string; playLabel: string };
+type DemoClip = { src: string; poster: string; playLabel: string };
 
 /**
  * Click-to-load video. With a YouTube ID it embeds the company video (privacy-enhanced domain).
- * Without one it plays a temporary local demo clip (badged) or, failing that, links to the channel.
+ * Without one it plays a local clip or, failing that, links to the channel.
  * Nothing heavy loads until the visitor presses play.
  */
 export function VideoEmbed({ youtubeId, title, playLabel, channelUrl, channelLabel, demo }: { youtubeId: string | null; title: string; playLabel: string; channelUrl: string; channelLabel: string; demo?: DemoClip }) {
@@ -53,7 +53,6 @@ export function VideoEmbed({ youtubeId, title, playLabel, channelUrl, channelLab
           )}
         </>
       )}
-      {useDemo && <span className="mp-demo-badge mp-media-badge">{demo.badge}</span>}
     </div>
   );
 }

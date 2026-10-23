@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { DICT, CONTACT, type Locale } from "@/content/site";
-import { FEATURED_PROJECTS } from "@/content/projects";
+import { FEATURED_PROJECTS, toCard } from "@/content/projects";
 import { SiteChrome } from "@/components/SiteChrome";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -13,6 +13,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
   const { lang } = await params;
   return pageMetadata(lang, "", DICT[lang].meta.title, DICT[lang].meta.description);
 }
+
+/** Icons for the four marketing-doc points: locations · options · guidance · citizenship/residence. */
+const POINT_ICONS = ["pin", "building", "key", "globe"];
 
 /** Temporary stock photography per service (public/media/CREDITS.md). */
 const SERVICE_IMAGES: Record<string, string> = { investment: "/media/svc-investment.webp", residential: "/media/svc-residential.webp", commercial: "/media/svc-commercial.webp" };
@@ -46,7 +49,6 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Loc
           <img src="/media/hero-1920.webp" srcSet="/media/hero-m.webp 800w, /media/hero-1280.webp 1280w, /media/hero-1920.webp 1920w" sizes="100vw" alt="" width={1920} height={1080} fetchPriority="high" decoding="async" />
         </div>
         <div className="mp-photo-hero__scrim" />
-        <span className="mp-demo-badge mp-media-badge">{t.demo.badge}</span>
         <div className="mp-container mp-photo-hero__inner">
           <div className="mp-photo-hero__panel">
             <p className="mp-heading__eyebrow">{t.hero.eyebrow}</p>
@@ -61,13 +63,29 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Loc
         </div>
       </section>
 
+      {/* VALUE STRIP — wording from the company's marketing doc */}
+      <section className="mp-points" aria-label={t.marketing.intro}>
+        <div className="mp-container">
+          <div className="mp-points__card">
+            <p className="mp-points__intro">{t.marketing.intro}</p>
+            <ul className="mp-points__list">
+              {t.marketing.points.map((pt, i) => (
+                <li key={pt} className="mp-points__item">
+                  <span className="mp-points__icon"><Icon name={POINT_ICONS[i] ?? "check"} /></span>
+                  <span className="mp-points__text">{pt}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* ABOUT — image + approved bio */}
       <section className="mp-section mp-section--white" id="about" aria-labelledby="about-title">
         <div className="mp-container mp-about" data-mp-reveal>
           <figure className="mp-about__media">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/media/about.webp" alt="" width={900} height={1125} loading="lazy" decoding="async" />
-            <span className="mp-demo-badge mp-media-badge">{t.demo.badge}</span>
           </figure>
           <div className="mp-about__body">
             <SectionHeading eyebrow={t.about.eyebrow} title={t.about.title} id="about-title" />
@@ -90,7 +108,6 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Loc
                 <div className="mp-tile__media">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={SERVICE_IMAGES[s.key]} alt="" width={720} height={900} loading="lazy" decoding="async" />
-                  <span className="mp-demo-badge mp-media-badge">{t.demo.badge}</span>
                 </div>
                 <div className="mp-tile__body">
                   {s.key === "investment" && <span className="mp-badge mp-badge--status mp-tile__badge">{t.services.highlightLabel}</span>}
@@ -127,10 +144,9 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Loc
           </div>
           <div className="mp-grid">
             <ul className="mp-grid__list">
-              {FEATURED_PROJECTS.map((p) => (<li key={p.id}><ProjectCard project={p} lang={lang} /></li>))}
+              {FEATURED_PROJECTS.map((p) => (<li key={p.slug}><ProjectCard project={toCard(p)} lang={lang} /></li>))}
             </ul>
           </div>
-          <p className="mp-draft-note">{t.projects.draftNote}</p>
         </div>
       </section>
 
@@ -148,9 +164,8 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Loc
               playLabel={t.video.play}
               channelUrl={CONTACT.youtubeChannel}
               channelLabel={t.video.channel}
-              demo={{ src: "/media/bosphorus-960.mp4", poster: "/media/video-poster.webp", badge: t.demo.badge, playLabel: t.demo.videoPlay }}
+              demo={{ src: "/media/bosphorus-960.mp4", poster: "/media/video-poster.webp", playLabel: t.demo.videoPlay }}
             />
-            {!CONTACT.introVideoId && <p className="mp-video-section__note">{t.demo.videoNote}</p>}
           </div>
         </div>
       </section>

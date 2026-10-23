@@ -3,7 +3,8 @@ import { Icon } from "./Icon";
 
 export type PageKey = "home" | "projects" | "notFound";
 
-export function LanguageSwitch({ lang, page, label }: { lang: Locale; page: PageKey; label: string }) {
+/** Links to the same page in every language. `path` is the part after `/<lang>/` ("", "projects/", "projects/<slug>/"). */
+export function LanguageSwitch({ lang, path, label }: { lang: Locale; path: string; label: string }) {
   return (
     <nav className="mp-lang" aria-label={label}>
       <Icon name="globe" className="mp-lang__icon" />
@@ -12,7 +13,7 @@ export function LanguageSwitch({ lang, page, label }: { lang: Locale; page: Page
           <li key={l}>
             <a
               className="mp-lang__link"
-              href={page === "projects" ? `/${l}/projects/` : `/${l}/`}
+              href={`/${l}/${path}`}
               lang={LOCALE_META[l].htmlLang}
               hrefLang={LOCALE_META[l].htmlLang}
               aria-current={l === lang ? "true" : undefined}

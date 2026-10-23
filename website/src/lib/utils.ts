@@ -4,14 +4,16 @@ export function whatsappUrl(message: string): string {
   return `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(message)}`;
 }
 
-/** "$250,000" — USD, western digits in every language (design-system decision). */
-export function formatPrice(value: number, lang: Locale): string {
-  return "$" + value.toLocaleString(lang === "tr" ? "tr-TR" : "en-US", { maximumFractionDigits: 0 });
+/** "$250,000" / "₺18,019,000" — the currency the company's source states (never converted), western digits in every language. */
+export function formatMoney(m: { amount: number; currency: "USD" | "TRY" }, lang: Locale): string {
+  const n = m.amount.toLocaleString(lang === "tr" ? "tr-TR" : "en-US", { maximumFractionDigits: 0 });
+  return (m.currency === "USD" ? "$" : "₺") + n;
 }
 
 export const href = {
   home: (l: Locale) => `/${l}/`,
   projects: (l: Locale) => `/${l}/projects/`,
+  project: (l: Locale, slug: string) => `/${l}/projects/${slug}/`,
   section: (l: Locale, id: string) => `/${l}/#${id}`,
 };
 

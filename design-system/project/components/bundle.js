@@ -3,7 +3,7 @@
 (function () {
   "use strict";
 
-  var PHONE = "905436227764";
+  var PHONE = "905312450579";
   var DEFAULT_MESSAGE = "مرحباً ميمورا بلس، أرغب بمعرفة المزيد عن مشاريعكم.";
   var CONSENT_KEY = "mp-consent-v1";
 

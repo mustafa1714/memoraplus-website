@@ -28,7 +28,7 @@ site/
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
    ```
    يمكن لاحقاً استضافتها ذاتياً (WOFF2) لتسريع التحميل وتقليل الاتصال بطرف ثالث.
-4. **JavaScript تحسين تدريجي:** كل المحتوى والروابط تعمل دونه (روابط واتساب `https://wa.me/905436227764?text=…` عادية). الـ JS يضيف: الهيدر المضغوط، قائمة الجوال، الفلترة، تحميل الفيديو، شريط الموافقة، الظهور الناعم.
+4. **JavaScript تحسين تدريجي:** كل المحتوى والروابط تعمل دونه (روابط واتساب `https://wa.me/905312450579?text=…` عادية). الـ JS يضيف: الهيدر المضغوط، قائمة الجوال، الفلترة، تحميل الفيديو، شريط الموافقة، الظهور الناعم.
    ```html
    <script src="/assets/js/memora.js" defer></script>
    <script type="module" src="/assets/js/main.js"></script>
@@ -59,4 +59,4 @@ site/
 | `whatsappUrl(message?)` | رابط واتساب برسالة جاهزة |
 | `formatPrice(n, lang?)` | `$250,000` |
 | `icon(name)` | SVG أيقونة خطية |
-| `PHONE` | `905436227764` |
+| `PHONE` | `905312450579` |

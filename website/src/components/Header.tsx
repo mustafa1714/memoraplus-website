@@ -7,7 +7,7 @@ import { href, whatsappUrl } from "@/lib/utils";
 import { Icon } from "./Icon";
 import { LanguageSwitch, type PageKey } from "./LanguageSwitch";
 
-export function Header({ lang, page }: { lang: Locale; page: PageKey }) {
+export function Header({ lang, page, path }: { lang: Locale; page: PageKey; path: string }) {
   const t = DICT[lang];
   const [compact, setCompact] = useState(false);
   const [open, setOpen] = useState(false);
@@ -62,7 +62,7 @@ export function Header({ lang, page }: { lang: Locale; page: PageKey }) {
           </a>
           <nav className="mp-header__nav" aria-label={t.nav.mainNav}>{list}</nav>
           <div className="mp-header__actions">
-            <div className="mp-header__lang"><LanguageSwitch lang={lang} page={page} label={t.nav.language} /></div>
+            <div className="mp-header__lang"><LanguageSwitch lang={lang} path={path} label={t.nav.language} /></div>
             <a className="mp-btn mp-btn--whatsapp mp-btn--sm mp-header__cta" href={wa} target="_blank" rel="noopener">
               <Icon name="whatsapp-chat" />{t.cta.whatsapp}
             </a>
@@ -82,7 +82,7 @@ export function Header({ lang, page }: { lang: Locale; page: PageKey }) {
         <div className="mp-header__panel" id="mp-menu">
           <nav aria-label={t.nav.mainNav}>{list}</nav>
           <a className="mp-btn mp-btn--whatsapp" href={wa} target="_blank" rel="noopener"><Icon name="whatsapp-chat" />{t.cta.whatsapp}</a>
-          <LanguageSwitch lang={lang} page={page} label={t.nav.language} />
+          <LanguageSwitch lang={lang} path={path} label={t.nav.language} />
         </div>
       </div>
     </header>
