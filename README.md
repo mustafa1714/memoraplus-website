@@ -16,8 +16,14 @@ npm run build    # static site in website/out/
 ```
 Set `NEXT_PUBLIC_SITE_URL` (see `website/.env.example`) before a production build; without it canonical/hreflang/Open Graph URLs are omitted on purpose.
 
+## Deploy (Hostinger)
+- Every push to `main` that touches `website/` runs [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml): `npm ci` + `npm run build` with `NEXT_PUBLIC_SITE_URL` from the repository variable (`https://memoraplus.net`), then commits `website/out/` to the **`deploy`** branch. It can also be run by hand (Actions > Deploy > Run workflow).
+- Hostinger hPanel > Advanced > GIT pulls the `deploy` branch into `public_html` (auto-deployment webhook).
+- `website/public/.htaccess` (copied into `out/`): HTTPS redirect, `/` to `/ar/`, custom 404, no-cache HTML, long cache for hashed JS/CSS and fonts.
+- Roll back: revert the commit on `main` and push (or run the workflow on an older commit).
+
 ## Content status
-- Project listings are **fictional sample data** and every stock photo/video is temporary — both are marked «تجريبي» / «DEMO» on the site.
-- Stock media sources and licences: [`website/public/media/CREDITS.md`](website/public/media/CREDITS.md) (Unsplash License / Pexels License). They are included only to demonstrate the design and are not licensed for redistribution as a standalone collection.
+- Projects are the company's real projects (Google Drive "Landing Page" folder); Arabic copy follows the source docs, EN/TR are draft translations.
+- Stock media (hero, About, Services, video): [`website/public/media/CREDITS.md`](website/public/media/CREDITS.md) (Unsplash License / Pexels License). They are not licensed for redistribution as a standalone collection.
 - Fonts: IBM Plex Sans Arabic / IBM Plex Sans, SIL Open Font License (`website/public/fonts/LICENSE-OFL.txt`).
 - The Memora Plus name and logos belong to Memora Plus.
