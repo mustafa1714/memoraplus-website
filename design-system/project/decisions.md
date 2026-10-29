@@ -44,7 +44,7 @@
 
 | # | القرار | المصدر |
 |---|---|---|
-| A29 | الاستضافة: Hostinger (خطة Websites – Unlimited)، والنطاق `memoraplus.net` مشترى من Hostinger. عنوان الموقع الرسمي `https://memoraplus.net` (يُستخدم في الروابط القانونية وhreflang وOpen Graph) | الشركة |
+| A29 | الاستضافة: Hostinger (خطة Websites – Unlimited)، والنطاق `memoraplus.net` مشترى من Hostinger. عنوان الموقع الرسمي `https://memoraplus.net` (يُستخدم في روابط canonical وhreflang وOpen Graph) | الشركة |
 | A30 | النشر من GitHub (`mustafa1714/memoraplus-website`): كل تعديل على `main` يُبنى تلقائياً ويُنشر إلى الفرع `deploy`، وHostinger مربوط بحساب GitHub ويسحب الفرع `deploy` إلى `public_html` تلقائياً | الشركة |
 | A31 | فصل Vercel: حُذف مشروع Vercel (`memoraplus.vercel.app`) نهائياً، وحُذفت سجلات نشره وبيئاته من الريبو، وصار رابط الريبو الرئيسي `https://memoraplus.net` | الشركة |
 
