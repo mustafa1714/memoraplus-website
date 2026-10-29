@@ -24,7 +24,11 @@ export default async function LangLayout({ children, params }: { children: React
   const meta = LOCALE_META[lang];
   return (
     <html lang={meta.htmlLang} dir={meta.dir} className="mp-no-js">
-      <body className="mp-root" lang={meta.htmlLang}>{children}</body>
+      <body className="mp-root" lang={meta.htmlLang}>
+        {/* Remembers the visitor's language (a functional preference, no tracking) so the root 404 page can follow it. */}
+        <script dangerouslySetInnerHTML={{ __html: `try{localStorage.setItem("mp-lang","${lang}")}catch(e){}` }} />
+        {children}
+      </body>
     </html>
   );
 }

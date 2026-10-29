@@ -77,7 +77,11 @@ type Dict = {
   };
   cookie: { title: string; text: string; accept: string; reject: string; policy: string };
   /** 404 page — DRAFT UI copy (all languages) for review by the content owner. */
-  notFound: { title: string; lead: string; home: string; homeIn: string };
+  notFound: {
+    eyebrow: string; title: string; lead: string; home: string; projects: string; suggest: string;
+    links: Record<"home" | "projects" | "contact", { title: string; text: string }>;
+    featured: string; helpTitle: string; helpLead: string;
+  };
   demo: { videoPlay: string };
 };
 
@@ -163,7 +167,22 @@ export const DICT: Record<Locale, Dict> = {
       },
     },
     cookie: { title: "ملفات الارتباط", text: "نستخدم ملفات الارتباط لتحليل الزيارات وتحسين تجربتكم. لن نفعّلها إلا بموافقتكم.", accept: "قبول", reject: "رفض", policy: "سياسة الخصوصية" },
-    notFound: { title: "الصفحة غير موجودة", lead: "ربما تغيّر الرابط أو لم تعد الصفحة متاحة. عودوا إلى الرئيسية أو تواصلوا معنا عبر واتساب.", home: "العودة إلى الرئيسية", homeIn: "الصفحة الرئيسية بالعربية" },
+    notFound: {
+      eyebrow: "خطأ 404",
+      title: "الصفحة غير موجودة",
+      lead: "ربما تغيّر الرابط أو لم تعد الصفحة متاحة، لكن فرصتك العقارية ما زالت هنا. تصفّح مشاريعنا في إسطنبول أو تواصل معنا مباشرة.",
+      home: "العودة إلى الرئيسية",
+      projects: "تصفّح المشاريع",
+      suggest: "ربما تبحث عن",
+      links: {
+        home: { title: "الصفحة الرئيسية", text: "تعرّف على ميمورا بلس وخدماتنا" },
+        projects: { title: "جميع المشاريع", text: "مشاريع سكنية وتجارية في إسطنبول" },
+        contact: { title: "تواصل معنا", text: "الهاتف وواتساب وموقعنا في إسطنبول" },
+      },
+      featured: "مشاريع قد تهمّك",
+      helpTitle: "لم تجد ما تبحث عنه؟",
+      helpLead: "أرسل لنا ما تبحث عنه عبر واتساب أو اتصل بنا، ونساعدك في الوصول إلى المشروع المناسب.",
+    },
     demo: { videoPlay: "شاهد الفيديو" },
   },
 
@@ -242,7 +261,22 @@ export const DICT: Record<Locale, Dict> = {
       },
     },
     cookie: { title: "Cookies", text: "We use cookies to analyse traffic and improve your experience. We only enable them with your consent.", accept: "Accept", reject: "Reject", policy: "Privacy policy" },
-    notFound: { title: "Page not found", lead: "The link may have changed or the page is no longer available. Go back to the homepage or contact us on WhatsApp.", home: "Back to the homepage", homeIn: "English homepage" },
+    notFound: {
+      eyebrow: "Error 404",
+      title: "Page not found",
+      lead: "The link may have changed or the page is no longer available, but your next property is still here. Browse our projects in Istanbul or contact us directly.",
+      home: "Back to the homepage",
+      projects: "Browse projects",
+      suggest: "You may be looking for",
+      links: {
+        home: { title: "Homepage", text: "About Memora Plus and our services" },
+        projects: { title: "All projects", text: "Residential and commercial projects in Istanbul" },
+        contact: { title: "Contact us", text: "Phone, WhatsApp and our location in Istanbul" },
+      },
+      featured: "Projects you may like",
+      helpTitle: "Can't find what you're looking for?",
+      helpLead: "Tell us what you're looking for on WhatsApp or give us a call, and we'll help you find the right project.",
+    },
     demo: { videoPlay: "Play the video" },
   },
 
@@ -321,7 +355,22 @@ export const DICT: Record<Locale, Dict> = {
       },
     },
     cookie: { title: "Çerezler", text: "Ziyaretleri analiz etmek ve deneyiminizi iyileştirmek için çerez kullanıyoruz. Yalnızca onayınızla etkinleştiririz.", accept: "Kabul et", reject: "Reddet", policy: "Gizlilik politikası" },
-    notFound: { title: "Sayfa bulunamadı", lead: "Bağlantı değişmiş ya da sayfa artık mevcut olmayabilir. Ana sayfaya dönün veya bize WhatsApp'tan ulaşın.", home: "Ana sayfaya dön", homeIn: "Türkçe ana sayfa" },
+    notFound: {
+      eyebrow: "Hata 404",
+      title: "Sayfa bulunamadı",
+      lead: "Bağlantı değişmiş ya da sayfa artık mevcut olmayabilir, ama aradığınız mülk hâlâ burada. İstanbul'daki projelerimize göz atın veya bizimle doğrudan iletişime geçin.",
+      home: "Ana sayfaya dön",
+      projects: "Projelere göz atın",
+      suggest: "Şunları arıyor olabilirsiniz",
+      links: {
+        home: { title: "Ana sayfa", text: "Memora Plus ve hizmetlerimiz hakkında" },
+        projects: { title: "Tüm projeler", text: "İstanbul'da konut ve ticari projeler" },
+        contact: { title: "Bize ulaşın", text: "Telefon, WhatsApp ve İstanbul'daki konumumuz" },
+      },
+      featured: "İlginizi çekebilecek projeler",
+      helpTitle: "Aradığınızı bulamadınız mı?",
+      helpLead: "Aradığınızı WhatsApp'tan bize yazın veya arayın; size uygun projeyi bulmanıza yardımcı olalım.",
+    },
     demo: { videoPlay: "Videoyu izleyin" },
   },
 };
