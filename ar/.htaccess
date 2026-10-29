@@ -1,0 +1,2 @@
+# Missing URLs under /ar/ get the 404 page in this language (status stays 404).
+ErrorDocument 404 /ar/page-not-found/index.html
