@@ -57,8 +57,8 @@
   },
   "lastChange": {
     "by": "Claude",
-    "at": "2026-10-30T12:00:00Z",
+    "at": "2026-11-01T12:00:00Z",
     "via": "Claude Code",
-    "note": "Decisions log: A29-A32 (30 Oct 2026) - hosting on Hostinger at https://memoraplus.net, deploy from GitHub via the `deploy` branch, Vercel project removed, 404 page per language with a real-estate layout; deploy and 404 details added to section B."
+    "note": "Decisions log: A33 (1 Nov 2026) - project images from the Drive update of 30 Oct 2026 (Bizim Evler 11 and Referans Pendik images, Kanal Istanbul gallery); A26 and A28 annotated; import details in section B; section C updated."
   }
 }
