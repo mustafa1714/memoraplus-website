@@ -1,7 +1,7 @@
 import { t, type Project } from "./types";
 
 // Source: Drive › Landing Page › مشروع قناة إسطنبول المائية ومدينة يني شهير (Yenişehir) (Google Doc 1DGRUER1zF6ohwTf_rPHf6YsBPPof-n3ajG1GmgWDrp0).
-// Shown as a general project / investment opportunity at the company's request (23 Oct 2026). Wording follows the doc; no images supplied.
+// Shown as a general project / investment opportunity at the company's request (23 Oct 2026). Wording follows the doc; images added to the Drive folder on 30 Oct 2026.
 export const kanalIstanbul: Project = {
   slug: "kanal-istanbul-yenisehir",
   name: t("قناة إسطنبول ومدينة يني شهير", "Kanal Istanbul & Yenişehir", "Kanal İstanbul ve Yenişehir"),

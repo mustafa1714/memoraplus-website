@@ -87,7 +87,7 @@ export const PROJECT_MEDIA: Record<string, { gallery: MediaImage[]; plans: Media
           1920
         ],
         "w": 1920,
-        "h": 1200
+        "h": 1419
       },
       {
         "src": "/projects/basak-evler-intaya/02",
@@ -117,7 +117,7 @@ export const PROJECT_MEDIA: Record<string, { gallery: MediaImage[]; plans: Media
           1920
         ],
         "w": 1920,
-        "h": 1483
+        "h": 1200
       }
     ],
     "plans": []
@@ -198,20 +198,83 @@ export const PROJECT_MEDIA: Record<string, { gallery: MediaImage[]; plans: Media
         ],
         "w": 1920,
         "h": 1080
+      },
+      {
+        "src": "/projects/bizim-evler-10/03",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "w": 1920,
+        "h": 1080
+      },
+      {
+        "src": "/projects/bizim-evler-10/04",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "w": 1920,
+        "h": 1080
+      },
+      {
+        "src": "/projects/bizim-evler-10/05",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "w": 1920,
+        "h": 1438
+      }
+    ],
+    "plans": []
+  },
+  "bizim-evler-11": {
+    "gallery": [
+      {
+        "src": "/projects/bizim-evler-11/01",
+        "widths": [
+          640,
+          750
+        ],
+        "w": 750,
+        "h": 450
+      },
+      {
+        "src": "/projects/bizim-evler-11/02",
+        "widths": [
+          640,
+          750
+        ],
+        "w": 750,
+        "h": 450
+      },
+      {
+        "src": "/projects/bizim-evler-11/03",
+        "widths": [
+          640,
+          750
+        ],
+        "w": 750,
+        "h": 450
+      },
+      {
+        "src": "/projects/bizim-evler-11/04",
+        "widths": [
+          640,
+          750
+        ],
+        "w": 750,
+        "h": 450
       }
     ],
     "plans": []
   },
   "bizim-evler-12": {
     "gallery": [
-      {
-        "src": "/projects/bizim-evler-12/01",
-        "widths": [
-          640
-        ],
-        "w": 640,
-        "h": 384
-      },
       {
         "src": "/projects/bizim-evler-12/02",
         "widths": [
@@ -241,6 +304,55 @@ export const PROJECT_MEDIA: Record<string, { gallery: MediaImage[]; plans: Media
         ],
         "w": 1920,
         "h": 1408
+      },
+      {
+        "src": "/projects/bizim-evler-12/05",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "w": 1920,
+        "h": 1080
+      },
+      {
+        "src": "/projects/bizim-evler-12/06",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "w": 1920,
+        "h": 1080
+      },
+      {
+        "src": "/projects/bizim-evler-12/07",
+        "widths": [
+          640,
+          768
+        ],
+        "w": 768,
+        "h": 681
+      },
+      {
+        "src": "/projects/bizim-evler-12/08",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "w": 1920,
+        "h": 1080
+      },
+      {
+        "src": "/projects/bizim-evler-12/09",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "w": 1920,
+        "h": 1080
       }
     ],
     "plans": []
@@ -250,34 +362,38 @@ export const PROJECT_MEDIA: Record<string, { gallery: MediaImage[]; plans: Media
       {
         "src": "/projects/buyukyali-istanbul/01",
         "widths": [
-          640
+          640,
+          750
         ],
-        "w": 640,
-        "h": 384
+        "w": 750,
+        "h": 450
       },
       {
         "src": "/projects/buyukyali-istanbul/02",
         "widths": [
-          640
+          640,
+          750
         ],
-        "w": 640,
-        "h": 384
+        "w": 750,
+        "h": 450
       },
       {
         "src": "/projects/buyukyali-istanbul/03",
         "widths": [
-          640
+          640,
+          750
         ],
-        "w": 640,
-        "h": 384
+        "w": 750,
+        "h": 450
       },
       {
         "src": "/projects/buyukyali-istanbul/04",
         "widths": [
-          640
+          640,
+          750
         ],
-        "w": 640,
-        "h": 384
+        "w": 750,
+        "h": 450
       }
     ],
     "plans": []
@@ -298,10 +414,11 @@ export const PROJECT_MEDIA: Record<string, { gallery: MediaImage[]; plans: Media
         "src": "/projects/deniz-istanbul/02",
         "widths": [
           640,
-          1280
+          1280,
+          1620
         ],
-        "w": 1280,
-        "h": 853
+        "w": 1620,
+        "h": 1080
       },
       {
         "src": "/projects/deniz-istanbul/03",
@@ -342,6 +459,50 @@ export const PROJECT_MEDIA: Record<string, { gallery: MediaImage[]; plans: Media
         ],
         "w": 1920,
         "h": 1280
+      }
+    ],
+    "plans": []
+  },
+  "kanal-istanbul-yenisehir": {
+    "gallery": [
+      {
+        "src": "/projects/kanal-istanbul-yenisehir/01",
+        "widths": [
+          640,
+          1280,
+          1536
+        ],
+        "w": 1536,
+        "h": 1024
+      },
+      {
+        "src": "/projects/kanal-istanbul-yenisehir/02",
+        "widths": [
+          640,
+          1280,
+          1536
+        ],
+        "w": 1536,
+        "h": 1024
+      },
+      {
+        "src": "/projects/kanal-istanbul-yenisehir/03",
+        "widths": [
+          640,
+          1280,
+          1645
+        ],
+        "w": 1645,
+        "h": 956
+      },
+      {
+        "src": "/projects/kanal-istanbul-yenisehir/04",
+        "widths": [
+          640,
+          941
+        ],
+        "w": 941,
+        "h": 1671
       }
     ],
     "plans": []
@@ -455,6 +616,111 @@ export const PROJECT_MEDIA: Record<string, { gallery: MediaImage[]; plans: Media
         "h": 1920
       }
     ]
+  },
+  "referans-pendik": {
+    "gallery": [
+      {
+        "src": "/projects/referans-pendik/01",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "w": 1920,
+        "h": 1200
+      },
+      {
+        "src": "/projects/referans-pendik/02",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "w": 1920,
+        "h": 1067
+      },
+      {
+        "src": "/projects/referans-pendik/03",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "w": 1920,
+        "h": 1200
+      },
+      {
+        "src": "/projects/referans-pendik/04",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "w": 1920,
+        "h": 1067
+      },
+      {
+        "src": "/projects/referans-pendik/05",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "w": 1920,
+        "h": 1200
+      },
+      {
+        "src": "/projects/referans-pendik/06",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "w": 1920,
+        "h": 1130
+      },
+      {
+        "src": "/projects/referans-pendik/07",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "w": 1920,
+        "h": 1280
+      },
+      {
+        "src": "/projects/referans-pendik/08",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "w": 1920,
+        "h": 873
+      },
+      {
+        "src": "/projects/referans-pendik/09",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "w": 1920,
+        "h": 1079
+      },
+      {
+        "src": "/projects/referans-pendik/10",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "w": 1920,
+        "h": 1079
+      }
+    ],
+    "plans": []
   },
   "topkapi-29": {
     "gallery": [

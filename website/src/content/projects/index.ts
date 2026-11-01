@@ -36,16 +36,16 @@ export const PROJECTS: Project[] = [
   referansPendik,
 ];
 
-/** Cover image index per project (chosen from the supplied gallery). Bizim Evler 11 and Referans Pendik have no own images. */
+/** Cover image index per project (chosen from the supplied gallery); projects not listed use their first image. */
 const COVER: Record<string, number> = {
   "bizim-evler-10": 1,
-  "bizim-evler-12": 1,
   "mavera-boutique": 1,
   "yedi-mavi": 3,
   "bahcekent-tim": 3,
+  "kanal-istanbul-yenisehir": 2,
 };
 
-/** Images supplied in a project's folder. Bizim Evler 11's two files duplicate BAŞAK EVLER INTAYA's and are not used. */
+/** Images supplied in a project's folder (Drive update of 30 Oct 2026 included). */
 export function projectMedia(slug: string): { gallery: MediaImage[]; plans: MediaImage[] } {
   return PROJECT_MEDIA[slug] ?? { gallery: [], plans: [] };
 }

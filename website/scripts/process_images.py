@@ -34,9 +34,9 @@ for project in sorted(p for p in src.iterdir() if p.is_dir()):
             out_dir.mkdir(parents=True, exist_ok=True)
             made = []
             for w in widths:
-                if w > w0 and made:
-                    continue  # no upscaling beyond the original
-                tw = min(w, w0)
+                tw = min(w, w0)  # no upscaling: a small original is also kept at its own width
+                if tw in made:
+                    continue
                 th = round(h0 * tw / w0)
                 im2 = im.resize((tw, th), Image.LANCZOS) if tw != w0 else im
                 out = out_dir / f"{f.stem}-{tw}.webp"

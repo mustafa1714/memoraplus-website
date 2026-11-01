@@ -66,7 +66,7 @@ export const maveraBoutique: Project = {
   },
 };
 
-// Source: Drive › Landing Page › مشروع Referans Pendik (Google Doc 1I4_2KGQbMNzzycMDNyjt_MkIa4DTs690pZSSIpPeXnk). No images supplied.
+// Source: Drive › Landing Page › مشروع Referans Pendik (Google Doc 1I4_2KGQbMNzzycMDNyjt_MkIa4DTs690pZSSIpPeXnk). Images added to the Drive folder on 30 Oct 2026.
 export const referansPendik: Project = {
   slug: "referans-pendik",
   name: t("Referans Pendik", "Referans Pendik", "Referans Pendik"),
